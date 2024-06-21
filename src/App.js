@@ -31,8 +31,8 @@ const App = () => {
       <h1>STAR WARS COSAS</h1>
       <div className="filter-buttons">
         <button onClick={()=> setFilter('character')}>Personajes</button>
-        <button onClick={()=> setFilter('planets')}>Planetas</button>
-        <button onClick={()=> setFilter('starShips')}>Naves</button>
+        <button onClick={()=> setFilter('planetas')}>Planetas</button>
+        <button onClick={()=> setFilter('nave')}>Naves</button>
         
 
       </div>
