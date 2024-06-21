@@ -5,9 +5,11 @@ const StarWarsCardStarships = ({starwars})=>{
     return (
         <div className="starWars-card-starships">
             <div className="starWars-info">
-                <h2>Naves</h2>
-                <p>Tipo: {starwars.type}</p>
-                <p>ID: {starwars.id}</p>
+            <h2>${nave.name}</h2>
+            <p>Modelo: ${nave.model}</p>
+            <p>Manofactura: ${nave.manufacturer}</p>
+            <p>Costo de la Nave: ${nave.cost_in_credits}Créditos</p>
+            <p>Tamaño: ${nave.length}mts</p>
             </div>
         </div>
     );
