@@ -4,7 +4,6 @@ import "./swCard.css";
 const StarWarsCardPlanets = ({starwars})=>{
     return (
         <div className="starWars-card-planets">
-            <img src={starwars.image} alt={starwars.name}/>
             <div className="starWars-info">
                 <h2>Planetas</h2>
                 <p>Tipo: {starwars.type}</p>

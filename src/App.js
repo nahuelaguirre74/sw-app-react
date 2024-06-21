@@ -28,7 +28,7 @@ const App = () => {
   }, []);
   return (
     <div className="app">
-      <h1>Menú</h1>
+      <h1>STAR WARS COSAS</h1>
       <div className="filter-buttons">
         <button onClick={()=> setFilter('character')}>Personajes</button>
         <button onClick={()=> setFilter('planets')}>Planetas</button>
