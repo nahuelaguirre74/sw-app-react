@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
+import StarwarList from './StarwarsList';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [starWars, setStarWars] = useState([]);
+  const[filter, setFilter] = useState('all');
+
+
+  useEffect(() => {
+    const fetchStarWars = async () => {
+      const response = await fetch('https://swapi.dev/api/');
+
+      const data = await response.json();
+      const swData = await Promise.all(
+        data.results.map(async (starWars, index) => {
+          const swDetails = await fetch(starWars.url).then((res) => res.json());
+          return {
+            id: swDetails.id,
+            name: swDetails.name,
+            type: swDetails.types[0].type.name,
+          };
+        })
+      );
+      setStarWars(swData);
+    };
+    fetchStarWars();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Menú</h1>
+      <div className="filter-buttons">
+        <button onClick={()=> setFilter('character')}>Personajes</button>
+        <button onClick={()=> setFilter('planets')}>Planetas</button>
+        <button onClick={()=> setFilter('starShips')}>Naves</button>
+        
+
+      </div>
+      <starwarsList starWars={starWars} filterStarWars={filter} />
     </div>
   );
-}
+};
 
 export default App;
