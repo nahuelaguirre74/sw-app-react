@@ -1,0 +1,33 @@
+.starWars-card-character{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+.starWars-card-starships{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+.starWars-card-planets{
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+}
+
+.starWars-info {
+    padding: 10px;
+}

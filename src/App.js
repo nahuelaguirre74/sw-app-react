@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import StarwarList from './StarwarsList';
+import StarwarsList from './StarwarsList';
 import './App.css';
 
 const App = () => {

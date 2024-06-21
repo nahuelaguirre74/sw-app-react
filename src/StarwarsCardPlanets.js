@@ -6,7 +6,7 @@ const StarWarsCardPlanets = ({starwars})=>{
         <div className="starWars-card-planets">
             <img src={starwars.image} alt={starwars.name}/>
             <div className="starWars-info">
-                <h2>{starwars.name}</h2>
+                <h2>Planetas</h2>
                 <p>Tipo: {starwars.type}</p>
                 <p>ID: {starwars.id}</p>
             </div>
