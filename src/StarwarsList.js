@@ -5,7 +5,7 @@ import StarWarsCardStarships from './StarwarsCardStarships';
 import './swList.css';
 
 const StarwarsList = ({starWars, filterstarWars})=>{
-    const [filteredSw, setFilteredSw] = useState(starWars); //primaria
+    const [filteredSw, setFilteredSw] = useState(starWars);
 
     useEffect(()=>{
         setFilteredSw(
